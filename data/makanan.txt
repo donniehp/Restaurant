@@ -1,0 +1,3 @@
+MAKANAN|Nasi Goreng|15000.0|Menu Nusantara
+MAKANAN|Nasi Padang|25000.0|Menu Nusantara
+MAKANAN|Nasi Gudeg Surabaya|20000.0|Menu Nusantara

@@ -1,0 +1,2 @@
+MINUMAN|Es Teh Manis|5000.0|Minuman Dingin
+MINUMAN|Es Teh Tawar|3000.0|Minuman Dingin
