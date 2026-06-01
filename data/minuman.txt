@@ -1,2 +1,4 @@
 MINUMAN|Es Teh Manis|5000.0|Minuman Dingin
 MINUMAN|Es Teh Tawar|3000.0|Minuman Dingin
+MINUMAN|Jus Alpukat|25000.0|Healty Juice
+MINUMAN|Air Mineral AQUA 300ml|5000.0|Mineral Water

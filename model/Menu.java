@@ -52,9 +52,9 @@ public class Menu {
         // Also write combined menu file plus separate files for makanan, minuman, and diskon
         try (
                 PrintWriter writer = new PrintWriter(new FileWriter(namaFile));
-                PrintWriter writerMakanan = new PrintWriter(new FileWriter("restaurant/data/makanan.txt"));
-                PrintWriter writerMinuman = new PrintWriter(new FileWriter("restaurant/data/minuman.txt"));
-                PrintWriter writerDiskon = new PrintWriter(new FileWriter("restaurant/data/diskon.txt"))
+                PrintWriter writerMakanan = new PrintWriter(new FileWriter("data/makanan.txt"));
+                PrintWriter writerMinuman = new PrintWriter(new FileWriter("data/minuman.txt"));
+                PrintWriter writerDiskon = new PrintWriter(new FileWriter("data/diskon.txt"));
         ) {
             for (MenuItem item : daftarMenu) {
                 if (item instanceof Makanan) {

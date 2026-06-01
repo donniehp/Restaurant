@@ -82,7 +82,7 @@ public class MenuPanel extends JPanel {
         add(panelTombol, BorderLayout.SOUTH);
 
         btnTambah.addActionListener(e -> tambahItem());
-        btnSimpan.addActionListener(e -> menu.simpanKeFolder("restaurant/data"));
+        btnSimpan.addActionListener(e -> menu.simpanKeFolder("data"));
         btnHapus.addActionListener(e -> hapusItem());
     }
 
