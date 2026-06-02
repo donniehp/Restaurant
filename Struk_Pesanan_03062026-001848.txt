@@ -1,0 +1,40 @@
+                          RESTORAN
+                        NIKMAT LEZAT
+                  Alamat: Denpasar - Bali
+                No. Telp & WA : 08123456789
+                email : info@nikmatlezat.com
+                  https://nikmatlezat.com
+                    03/06/2026  00:18:48
+============================================================
+Item                             Qty       Harga       Total
+------------------------------------------------------------
+Nasi Padang                        2   Rp 25.000   Rp 50.000
+Bakso Urat - Sapi                  2   Rp 25.000   Rp 50.000
+Jus Alpukat                        2   Rp 25.000   Rp 50.000
+Es Teh Manis                       2    Rp 5.000   Rp 10.000
+------------------------------------------------------------
+Subtotal                                          Rp 160.000
+Diskon (Promo 10%)                                 Rp 16.000
+Subtotal setelah Diskon                           Rp 144.000
+Pajak (10%)                                        Rp 14.400
+Service Charge                                     Rp 20.000
+============================================================
+TOTAL BAYAR                                       Rp 178.400
+============================================================
+Pembayaran (Cash)                                 Rp 200.000
+Kembalian                                          Rp 21.600
+------------------------------------------------------------
+
+              Terima kasih atas kunjungan Anda
+------------------------------------------------------------
+                   !!! S E L A M A T !!!
+                      Anda Mendapatkan
+        Promo Buy 1 Get 1 Free pada Kategori Minuman
+       Tunjukkan struk ini saat pembelian selanjutnya
+  Berlaku di seluruh Outlet Nikmat Lezat seluruh Indonesia
+               Syarat dan Ketentuan Berlaku :
+Berlaku untuk item dengan harga yang sama atau lebih rendah
+      Promo tidak dapat digabungkan dengan promo lain
+Promo berlaku sampai dengan 7 hari setelah tanggal pembelian
+       Promo tidak berlaku untuk kelipatan pembelian
+
