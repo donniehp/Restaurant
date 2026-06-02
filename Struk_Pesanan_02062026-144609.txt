@@ -1,0 +1,39 @@
+                          RESTORAN
+                        NIKMAT LEZAT
+                  Alamat: Denpasar - Bali
+                No. Telp & WA : 08123456789
+                email : info@nikmatlezat.com
+                  https://nikmatlezat.com
+                    02/06/2026  14:46:09
+============================================================
+Item                             Qty       Harga       Total
+------------------------------------------------------------
+Soto Ayam                          2   Rp 15.000   Rp 30.000
+Nasi Putih                         2    Rp 5.000   Rp 10.000
+Jus Alpukat                        2   Rp 25.000   Rp 50.000
+------------------------------------------------------------
+Subtotal                                           Rp 90.000
+Diskon (Promo 10%)                                  Rp 9.000
+Subtotal setelah Diskon                            Rp 81.000
+Pajak (10%)                                         Rp 8.100
+Service Charge                                     Rp 20.000
+============================================================
+TOTAL BAYAR                                       Rp 109.100
+============================================================
+Pembayaran (Cash)                                 Rp 150.000
+Kembalian                                          Rp 40.900
+------------------------------------------------------------
+
+              Terima kasih atas kunjungan Anda
+------------------------------------------------------------
+                   !!! S E L A M A T !!!
+                      Anda Mendapatkan
+        Promo Buy 1 Get 1 Free pada Kategori Minuman
+       Tunjukkan struk ini saat pembelian selanjutnya
+  Berlaku di seluruh Outlet Nikmat Lezat seluruh Indonesia
+               Syarat dan Ketentuan Berlaku :
+Berlaku untuk item dengan harga yang sama atau lebih rendah
+      Promo tidak dapat digabungkan dengan promo lain
+Promo berlaku sampai dengan 7 hari setelah tanggal pembelian
+       Promo tidak berlaku untuk kelipatan pembelian
+
