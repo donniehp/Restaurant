@@ -25,6 +25,12 @@ public class Menu {
         return daftarMenu;
     }
 
+    public void ubahItem(int index, MenuItem item) {
+        if (index >= 0 && index < daftarMenu.size() && item != null) {
+            daftarMenu.set(index, item);
+        }
+    }
+
     public MenuItem cariItem(String nama) {
         for (MenuItem item : daftarMenu) {
             if (item.getNama().equalsIgnoreCase(nama)) {

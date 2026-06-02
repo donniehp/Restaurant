@@ -18,6 +18,8 @@ public class MenuPanel extends JPanel {
     private JRadioButton rbPersen, rbNominal;
     private ButtonGroup bgTipeDiskon;
     private JLabel lblExtra;
+    private JButton btnTambah, btnPerbarui, btnEdit;
+    private int editingRow = -1;
 
     public MenuPanel(Menu menu) {
         this.menu = menu;
@@ -54,10 +56,14 @@ public class MenuPanel extends JPanel {
         inputPanel.add(new JLabel("Tipe Diskon:"));
         inputPanel.add(panelRadio);
 
-        JButton btnTambah = new JButton("Tambah Item");
+        btnTambah = new JButton("Tambah Item");
+        btnPerbarui = new JButton("Simpan Perubahan");
+        btnEdit = new JButton("Edit Item Terpilih");
         
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         buttonPanel.add(btnTambah);
+        buttonPanel.add(btnEdit);
+        buttonPanel.add(btnPerbarui);
 
         updateInputFields();
         comboTipe.addActionListener(e -> updateInputFields());
@@ -82,8 +88,11 @@ public class MenuPanel extends JPanel {
         add(panelTombol, BorderLayout.SOUTH);
 
         btnTambah.addActionListener(e -> tambahItem());
+        btnEdit.addActionListener(e -> isiFieldDariItemTerpilih());
+        btnPerbarui.addActionListener(e -> perbaruiItem());
         btnSimpan.addActionListener(e -> menu.simpanKeFolder("data"));
         btnHapus.addActionListener(e -> hapusItem());
+        btnPerbarui.setEnabled(false);
     }
 
     private void updateInputFields() {
@@ -151,12 +160,97 @@ public class MenuPanel extends JPanel {
             return;
         }
         menu.hapusItem(selectedRow);
+        if (editingRow == selectedRow) {
+            clearInputFields();
+        }
         tableModel.fireTableDataChanged();
     }
 
+    private void isiFieldDariItemTerpilih() {
+        int selectedRow = tableMenu.getSelectedRow();
+        if (selectedRow == -1) {
+            JOptionPane.showMessageDialog(this, "Pilih item yang akan diedit!");
+            return;
+        }
+
+        MenuItem item = menu.getDaftarMenu().get(selectedRow);
+        editingRow = selectedRow;
+        comboTipe.setSelectedItem(item.getKategori());
+        txtNama.setText(item.getNama());
+
+        if (item instanceof Makanan) {
+            Makanan m = (Makanan) item;
+            txtHarga.setText(String.valueOf(m.getHarga()));
+            txtExtra.setText(m.getJenisMakanan());
+        } else if (item instanceof Minuman) {
+            Minuman min = (Minuman) item;
+            txtHarga.setText(String.valueOf(min.getHarga()));
+            txtExtra.setText(min.getJenisMinuman());
+        } else if (item instanceof Diskon) {
+            Diskon d = (Diskon) item;
+            txtHarga.setText("0");
+            txtExtra.setText(String.valueOf(d.getDiskon()));
+            rbPersen.setSelected(d.isPersentase());
+            rbNominal.setSelected(!d.isPersentase());
+        }
+
+        updateInputFields();
+        btnPerbarui.setEnabled(true);
+        btnTambah.setEnabled(false);
+    }
+
+    private void perbaruiItem() {
+        if (editingRow == -1) {
+            JOptionPane.showMessageDialog(this, "Tidak ada item yang sedang diedit!");
+            return;
+        }
+
+        String nama = txtNama.getText().trim();
+        if (nama.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Nama tidak boleh kosong!", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        String tipe = (String) comboTipe.getSelectedItem();
+        try {
+            MenuItem updatedItem;
+            switch (tipe) {
+                case "Makanan":
+                    double hargaMakanan = Double.parseDouble(txtHarga.getText());
+                    String jenisMakanan = txtExtra.getText().trim();
+                    if (jenisMakanan.isEmpty()) throw new IllegalArgumentException("Jenis makanan harus diisi.");
+                    updatedItem = new Makanan(nama, hargaMakanan, jenisMakanan);
+                    break;
+                case "Minuman":
+                    double hargaMinuman = Double.parseDouble(txtHarga.getText());
+                    String jenisMinuman = txtExtra.getText().trim();
+                    if (jenisMinuman.isEmpty()) throw new IllegalArgumentException("Jenis minuman harus diisi.");
+                    updatedItem = new Minuman(nama, hargaMinuman, jenisMinuman);
+                    break;
+                default:
+                    double nilaiDiskon = Double.parseDouble(txtExtra.getText());
+                    boolean isPersen = rbPersen.isSelected();
+                    updatedItem = new Diskon(nama, nilaiDiskon, isPersen);
+                    break;
+            }
+            menu.ubahItem(editingRow, updatedItem);
+            tableModel.fireTableDataChanged();
+            clearInputFields();
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(this, "Input angka tidak valid!", "Error", JOptionPane.ERROR_MESSAGE);
+        } catch (IllegalArgumentException ex) {
+            JOptionPane.showMessageDialog(this, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
     private void clearInputFields() {
+        editingRow = -1;
         txtNama.setText("");
         txtHarga.setText("");
         txtExtra.setText("");
+        comboTipe.setSelectedIndex(0);
+        btnPerbarui.setEnabled(false);
+        btnTambah.setEnabled(true);
+        updateInputFields();
     }
 }
