@@ -1,6 +1,4 @@
-package restaurant;
-
-import restaurant.gui.MainApp;
+import gui.MainApp;
 import javax.swing.*;
 
 public class Main {

@@ -1,10 +1,10 @@
-package restaurant.gui;
+package gui;
 
-import restaurant.model.Makanan;
-import restaurant.model.Minuman;
-import restaurant.model.Diskon;
-import restaurant.model.MenuItem;
-import restaurant.model.Menu;
+import model.Makanan;
+import model.Minuman;
+import model.Diskon;
+import model.MenuItem;
+import model.Menu;
 
 import javax.swing.table.AbstractTableModel;
 

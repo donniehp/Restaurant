@@ -1,6 +1,6 @@
-package restaurant.gui;
+package gui;
 
-import restaurant.model.*;
+import model.*;
 
 import javax.swing.*;
 import java.awt.BorderLayout;

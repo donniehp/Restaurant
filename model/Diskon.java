@@ -1,4 +1,4 @@
-package restaurant.model;
+package model;
 
 public class Diskon extends MenuItem {
     private double diskon;

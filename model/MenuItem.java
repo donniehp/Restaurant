@@ -1,4 +1,4 @@
-package restaurant.model;
+package model;
 
 public abstract class MenuItem {
     private String nama;

@@ -1,4 +1,4 @@
-package restaurant.model;
+package model;
 
 public class Makanan extends MenuItem {
     private String jenisMakanan;

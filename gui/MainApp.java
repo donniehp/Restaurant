@@ -1,10 +1,10 @@
-package restaurant.gui;
+package gui;
 
-import restaurant.model.Makanan;
-import restaurant.model.Minuman;
-import restaurant.model.Diskon;
-import restaurant.model.Menu;
-import restaurant.model.Pesanan;
+import model.Makanan;
+import model.Minuman;
+import model.Diskon;
+import model.Menu;
+import model.Pesanan;
 
 import javax.swing.*;
 import java.awt.*;
